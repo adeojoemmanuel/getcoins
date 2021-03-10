@@ -41,6 +41,9 @@ import {
 } from '@ionic-native/geolocation';
 
 // Pages
+import { CopayersPage } from '../add/copayers/copayers';
+import { WalletDetailsPage } from '../wallet-details/wallet-details';
+import { AddPage } from '../add/add';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Network } from '../../providers/persistence/persistence';
 import { ExchangeCryptoPage } from '../exchange-crypto/exchange-crypto';
@@ -83,7 +86,7 @@ export class HomePage {
   showShoppingOption: boolean;
   @ViewChild('showCard')
   showCard;
-
+  public walletsGroups;
   @ViewChild(Slides) slides: Slides;
   public serverMessages: any[];
   public showServerMessage: boolean;
@@ -106,6 +109,7 @@ export class HomePage {
   private hasOldCoinbaseSession: boolean;
   private newReleaseVersion: string;
   private pagesMap: any;
+  public collapsedGroups;
 
   private isCordova: boolean;
   private zone;
@@ -151,6 +155,7 @@ export class HomePage {
     private atmLocationProvider: AtmLocationProvider,
     public geo: Geolocation,
   ) {
+    this.collapsedGroups = {};
     this.logger.info('Loaded: HomePage');
     this.zone = new NgZone({ enableLongStackTrace: false });
     this.subscribeEvents();
@@ -207,6 +212,7 @@ export class HomePage {
   }
 
   async ionViewWillEnter() {
+    this.walletsGroups = this.profileProvider.orderedWalletsByGroup;
     const config = this.configProvider.get();
     this.totalBalanceAlternativeIsoCode =
       config.wallet.settings.alternativeIsoCode;
@@ -384,6 +390,66 @@ export class HomePage {
         dismissible: true
       });
   }
+
+  private debounceSetWallets = _.debounce(
+    async () => {
+      this.profileProvider.setOrderedWalletsByGroup();
+      this.walletsGroups = this.profileProvider.orderedWalletsByGroup;
+    },
+    5000,
+    {
+      leading: true
+    }
+  );
+  
+  public addWallet(keyId): void {
+    this.navCtrl.push(AddPage, {
+      keyId
+    });
+  }
+  
+  public goToWalletDetails(wallet): void {
+    if (wallet.isComplete()) {
+      this.navCtrl.push(WalletDetailsPage, {
+        walletId: wallet.credentials.walletId
+      });
+    } else {
+      const copayerModal = this.modalCtrl.create(
+        CopayersPage,
+        {
+          walletId: wallet.credentials.walletId
+        },
+        {
+          cssClass: 'wallet-details-modal'
+        }
+      );
+      copayerModal.present();
+    }
+  }
+
+  public collapseGroup(keyId: string) {
+    this.collapsedGroups[keyId] = this.collapsedGroups[keyId] ? false : true;
+  }
+
+  public isCollapsed(keyId: string): boolean {
+    return this.collapsedGroups[keyId] ? true : false;
+  }
+
+  public showMoreOptions(): void {
+    const walletTabOptionsAction = this.actionSheetProvider.createWalletTabOptions(
+      { walletsGroups: this.walletsGroups }
+    );
+    walletTabOptionsAction.present();
+    walletTabOptionsAction.onDidDismiss(data => {
+      if (data)
+        data.keyId
+          ? this.addWallet(data.keyId)
+          : this.navCtrl.push(AddPage, {
+              isZeroState: true
+            });
+    });
+  }
+
 
   public getClosestTenLocations(geoObj, api): void {
     this.newResults = [];
