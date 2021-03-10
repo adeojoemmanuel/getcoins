@@ -88,7 +88,11 @@ import {
   Vibration,
   WalletConnectProvider,
   WalletProvider,
-  WyreProvider
+  WyreProvider,
+  AtmLocationProvider,
+  LocationTrackerProvider,
+  Geolocation,
+  BackgroundGeolocation,
 } from './index';
 
 @NgModule({
@@ -179,7 +183,11 @@ import {
     DecimalPipe,
     PersistenceProvider,
     File,
-    CardPhasesProvider
+    CardPhasesProvider,
+    Geolocation,
+    BackgroundGeolocation,
+    AtmLocationProvider,
+    LocationTrackerProvider,
   ]
 })
 export class ProvidersModule {}

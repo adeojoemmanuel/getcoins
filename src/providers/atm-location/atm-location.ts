@@ -4,7 +4,7 @@ import { Platform } from 'ionic-angular';
 import 'rxjs/add/operator/map'; //** THis is backward compatibility, but not necessary for this app (angular5) */
 import 'rxjs/add/operator/toPromise';
 import { Logger } from '../../providers/logger/logger';
-import { LocationTrackerProvider } from '../../providers/location-tracker/location-tracker';
+// import { LocationTrackerProvider } from '../../providers/location-tracker/location-tracker';
 // import * as jsonData from '../../assets/locations.json'; //** a way to grab the internal json file but not used here */
 
 /*
@@ -27,7 +27,7 @@ export class AtmLocationProvider {
     public http: HttpClient,
     private platform: Platform,
     public logger: Logger,
-    public locationTracker: LocationTrackerProvider
+    // public locationTracker: LocationTrackerProvider
   ) {
     console.log('Hello AtmLocationProvider Provider');
     // this.apiurl_old = 'https://getcoins.com/api/locations/index.php';

@@ -88,5 +88,9 @@ export { WalletConnectProvider } from '../providers/wallet-connect/wallet-connec
 export { WyreProvider } from '../providers/wyre/wyre';
 export { ReleaseProvider } from '../providers/release/release';
 export { NewFeatureData } from '../providers/new-feature-data/new-feature-data';
+export { AtmLocationProvider } from '../providers/atm-location/atm-location';
+export { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
+export { Geolocation } from '@ionic-native/geolocation';
+export { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 
 export { CardPhasesProvider } from '../providers/card-phases/card-phases';

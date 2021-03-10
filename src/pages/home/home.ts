@@ -1,6 +1,7 @@
 import { Component, NgZone, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Events, ModalController, NavController, Slides, AlertController } from 'ionic-angular';
+import { Events, ModalController, NavController, Platform, Slides, AlertController } from 'ionic-angular';
+
 import * as _ from 'lodash';
 import * as moment from 'moment';
 import { FormatCurrencyPipe } from '../../pipes/format-currency';
@@ -32,6 +33,12 @@ import {
   hasVisibleDiscount
 } from '../../providers/gift-card/gift-card';
 import { CardConfig } from '../../providers/gift-card/gift-card.types';
+import {
+  Geolocation,
+  GeolocationOptions,
+  Geoposition,
+  PositionError
+} from '@ionic-native/geolocation';
 
 // Pages
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,6 +54,7 @@ import { AddFundsPage } from '../onboarding/add-funds/add-funds';
 import { AmountPage } from '../send/amount/amount';
 import { AltCurrencyPage } from '../settings/alt-currency/alt-currency';
 import { AtmLocationProvider } from '../../providers/atm-location/atm-location';
+import { AtmLocationsPage } from './../atm-locations/atm-locations';
 
 export interface Advertisement {
   name: string;
@@ -109,8 +117,11 @@ export class HomePage {
   public localJson: any;
   public myLocation: any;
   private locations: any;
+  public offline: boolean;
+  public options: GeolocationOptions;
 
   constructor(
+    private plt: Platform,
     private persistenceProvider: PersistenceProvider,
     private logger: Logger,
     private analyticsProvider: AnalyticsProvider,
@@ -138,6 +149,7 @@ export class HomePage {
     private splashScreen: SplashScreen,
     public alertCtrl: AlertController,
     private atmLocationProvider: AtmLocationProvider,
+    public geo: Geolocation,
   ) {
     this.logger.info('Loaded: HomePage');
     this.zone = new NgZone({ enableLongStackTrace: false });
