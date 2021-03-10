@@ -32,11 +32,17 @@ $colors: (
   success: #01d1a2,
   info: #5476eb,
   light: #f4f4f4,
+  semilight: #fff,
   blank: #fff,
   dark: #000,
   grey: #667,
   light-grey: #9b9bab,
-  error: #e56c7b
+  error: #e56c7b,
+  color1:     #3d5e8b,
+  color2:     #eb9f0d,
+  color3:     #707070,
+  color4:     #eeeff1,
+  color5:   #383737,
 );
 
 $background-colors: (
@@ -52,6 +58,20 @@ $feather: #fbfbff;
 
 $slateDark: #434d5a;
 $black: #303133;
+
+$mainFont:1.3rem;
+ $appFonts:(h3:$mainFont + .3,h4:$mainFont + .1,h5:$mainFont,p:$mainFont - .1);
+ @each $head , $fontSize in $appFonts {
+      #{$head}{
+        font-size:$fontSize!important;
+      } 
+ }
+
+$mainHeight:44px;
+$mainRadius:1px;
+$mainMarg:10px;
+$iconFontSize:2rem; 
+$imgThumbnailSize:80px;
 
 // Refresh color
 $refresher-icon-color: color($colors, primary);

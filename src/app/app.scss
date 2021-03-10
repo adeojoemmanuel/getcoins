@@ -20,6 +20,51 @@ body {
   line-height: 22px;
 }
 
+
+// mixin in all App
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    ::-webkit-textarea-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+};
+@mixin whiteNormal($height,$lineNum){
+    white-space:  normal; 
+    max-height:  $height;
+    line-height:  $height / $lineNum;
+    display:  block;
+    overflow:  hidden;
+}
+@mixin whiteNoWrap($height){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:  $height;
+    line-height:  $height;
+    display:  block;
+}
+@mixin centerHeight($height){
+    display: inline-block;
+    height: $height;
+    width:  $height;
+    line-height: $height;
+    min-height:  $height;
+    text-align: center;
+}
+@mixin borderRadius($height){
+    @include centerHeight($height);
+    border-radius: 50%;
+}
+@mixin position($top,$right,$bottom,$left){
+    position: absolute;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+}
+
+
 // all content without menu
 ion-content.add-bottom-safe-area {
   .fixed-content,
@@ -46,6 +91,20 @@ ion-title.bp-title {
   .toolbar-title.toolbar-title-ios {
     font-weight: 700 !important;
   }
+}
+
+// box shadow
+%boxShadow{
+    box-shadow:  3px 3px 3px 0px rgba(0,0,0,0.18);
+    margin:  0px 2px 3px 0px;
+    width: calc(100% - 2px);
+}
+
+//Style of img Background
+.imgBg{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;  
 }
 
 // Alert position
@@ -785,7 +844,8 @@ ion-tabs {
       url('../assets/img/tab-icons/tab-scan.svg')
       url('../assets/img/tab-icons/tab-copay-scan.svg')
       url('../assets/img/tab-icons/tab-cards-active.svg')
-      url('../assets/img/tab-icons/tab-settings-active.svg');
+      url('../assets/img/tab-icons/tab-settings-active.svg')
+      url('../assets/img/tab-icons/ico-login.svg'); 
   }
 
   .tab-badge {
@@ -812,6 +872,11 @@ $cards-inactive: url('../assets/img/tab-icons/tab-cards.svg') no-repeat 50% 50%;
 $settings-active: url('../assets/img/tab-icons/tab-settings-active.svg')
   no-repeat 50% 50%;
 $settings-inactive: url('../assets/img/tab-icons/tab-settings.svg') no-repeat
+  50% 50%;
+
+$login-active: url('../assets/img/tab-icons/ico-login-selected.svg')
+  no-repeat 50% 50%;
+$login-inactive: url('../assets/img/tab-icons/ico-login.svg') no-repeat
   50% 50%;
 
 ion-icon {
@@ -884,6 +949,16 @@ ion-icon {
 
     .tab-button[aria-selected='true'] & {
       background: $settings-active;
+      background-size: contain;
+    }
+  }
+
+  &[class*='tab-login'] {
+    background: $login-inactive;
+    background-size: contain;
+
+    .tab-button[aria-selected='true'] & {
+      background: $login-active;
       background-size: contain;
     }
   }
