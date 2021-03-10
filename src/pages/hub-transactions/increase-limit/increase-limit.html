@@ -1,0 +1,59 @@
+<ion-menu [content]="content" swipeEnabled="false" type="overlay">
+  <ion-content>
+    <ion-list>
+      <ion-item menuClose  *ngFor="let p of pages" (click)="openPage(p.component)">
+        <ion-icon class="{{p.icon}}" item-left></ion-icon>
+        {{p.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <button ion-button clear menuClose (click)="logout()">Log out</button>
+  </ion-footer>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content  [class.animateApp]="animateVarible==true" swipeBackEnabled="false"></ion-nav> 
+
+<ion-content>
+  <ion-header>
+    <ion-navbar hideBackButton>
+      <ion-buttons left>
+        <button (click)="toggleMenu()" ion-button icon-only left>
+          <ion-icon name="ios-menu" style="color: white;"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Increase Limit</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <!-- 12404958086 -->
+  <!-- 085208 -->
+  <div class="uc-document__content">
+    <p>
+      <img class="document-image" src="assets/img/undraw_fill_forms_yltj.svg" alt="document image"/>
+    </p>
+    <span>Upload a copy of your ID to increase your transaction limits</span>
+    <!-- <h3 class="uc-document__title">any ID card</h3> -->
+    <p>Acceptable forms of photo ID include Drivers License, Passport or State Issued ID</p>
+  </div>
+  <div class="uc-camera__upload" (click)="openCam()">
+    <ion-icon ios="ios-camera-outline" md="ios-camera-outline"></ion-icon>
+    <span>Use Camera</span>
+  </div>
+  <div class="uc-divider"><span>or</span></div>
+  <div class="uc-gallery__document" (click)="browseFile()">
+    <ion-row>
+      <ion-col col-auto>
+        <ion-icon ios="ios-image-outline" md="ios-image-outline"></ion-icon>
+      </ion-col>
+      <ion-col col>
+        <h3 class="uc-gallery__title">Select the document from Gallery</h3>
+        <span>.png,.jpg or .pdf</span>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p style="font-size: 10px; align-items: center; text-align: center;">{{uploadFileCount}} Image selected</p>
+  <div class="uc-camera__upload" style="margin-top: 1.5px; margin-bottom: 1.5px;" (click)="submitform()">
+    
+    <span>Submit</span><br>
+  </div>
+</ion-content>

@@ -247,6 +247,26 @@ export class HomePage {
     setTimeout(() => {
       this.checkEmailLawCompliance();
     }, 2000);
+    
+    this.loadGeolocation().then(
+      res => {
+        if (res.error === null) {
+          this.getClosestTenLocations(res, true);
+        } else {
+          this.getClosestTenLocations(res, false);
+          this.loading = false;
+        }
+      },
+      err => {
+        let errorObj = {
+          lat: 0,
+          lng: 0,
+          error: err
+        };
+        this.getClosestTenLocations(errorObj, false);
+        this.loading = false;
+      }
+    );
   }
 
   private async loadAds() {

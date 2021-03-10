@@ -22,6 +22,7 @@ import { HomePage } from '../home/home';
 import { ScanPage } from '../scan/scan';
 import { SettingsPage } from '../settings/settings';
 import { WalletsPage } from '../wallets/wallets';
+import { LoginPage } from '../hub/login';
 
 import * as _ from 'lodash';
 import { Subscription } from 'rxjs';
@@ -379,4 +380,5 @@ export class TabsPage {
   scanRoot = ScanPage;
   cardsRoot = CardsPage;
   settingsRoot = SettingsPage;
+  LoginRoot = LoginPage;
 }
