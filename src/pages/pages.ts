@@ -145,6 +145,16 @@ import { MultiSendPage } from '../pages/send/multi-send/multi-send';
 import { SelectInputsPage } from '../pages/send/select-inputs/select-inputs';
 import { TransferToModalPage } from '../pages/send/transfer-to-modal/transfer-to-modal';
 import { TransferToPage } from '../pages/send/transfer-to/transfer-to';
+import { LoginPage } from '../pages/hub/login';
+import { RegisterPage } from '../pages/hub/register/register';
+import { ReportDetailsPage } from '../pages/hub-transactions/report-details/report-details';
+import { ReportTransaction } from '../pages/hub-transactions/report-transaction/report-transaction';
+import { TransactionDetailsPage } from '../pages/hub-transactions/transaction-details/transaction-details';
+import { TransactionsPage } from '../pages/hub-transactions/transactions/transactions';
+import { ViewReport } from '../pages/hub-transactions/view-report/view-report';
+import { IncreaseLimit } from '../pages/hub-transactions/increase-limit/increase-limit';
+import { UploadDocumentPage } from '../pages/hub-transactions/upload-document/upload-document';
+import { AtmLocationsPage } from './atm-locations/atm-locations';
 
 /* Receive */
 import { CustomAmountPage } from '../pages/receive/custom-amount/custom-amount';
@@ -271,6 +281,15 @@ export const PAGES = [
   SlideToAcceptPage,
   LocalThemePage,
   NewFeaturePage,
+  LoginPage,RegisterPage,
+  ReportDetailsPage,
+  ReportTransaction,
+  TransactionDetailsPage,
+  TransactionsPage,
+  ViewReport,
+  IncreaseLimit,
+  UploadDocumentPage,
+  AtmLocationsPage,
   // Phases: card pages
   PhaseOneCardIntro
 ];

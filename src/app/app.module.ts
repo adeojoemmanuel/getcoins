@@ -40,6 +40,8 @@ import { OrderByPipe } from '../pipes/order-by';
 import { SatToFiatPipe } from '../pipes/satToFiat';
 import { SatToUnitPipe } from '../pipes/satToUnit';
 import { ShortenedAddressPipe } from '../pipes/shortened-address';
+import { SafeUrlPipe } from '../pipes/safeUrl';
+import { StoreNamePipe } from '../pipes/store-name';
 
 /* Directives */
 import { Animate } from '../directives/animate/animate';
@@ -102,7 +104,9 @@ export class MyMissingTranslationHandler implements MissingTranslationHandler {
     SatToUnitPipe,
     SatToFiatPipe,
     OrderByPipe,
-    ShortenedAddressPipe
+    ShortenedAddressPipe,
+    SafeUrlPipe,
+    StoreNamePipe
   ],
   imports: [
     IonicModule.forRoot(CopayApp, {
