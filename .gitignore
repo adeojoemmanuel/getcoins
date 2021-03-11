@@ -29,7 +29,6 @@ build
 
 # Crowdin API key
 i18n/crowdin_api_key.txt
-src/assets/i18n/*.mo
 
 test/visual/latest
 test/visual/diffs
@@ -39,7 +38,6 @@ junitresults.xml
 
 .sourcemaps/
 .idea/
-.sass-cache/
 .tmp/
 .versions/
 coverage/
@@ -53,7 +51,6 @@ plugins/
 plugins/android.json
 plugins/ios.json
 screenshots/
-www/
 $RECYCLE.BIN/
 
 Thumbs.db
