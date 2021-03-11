@@ -39,6 +39,7 @@ import {
   Geoposition,
   PositionError
 } from '@ionic-native/geolocation';
+import * as localJsonFile from '../../assets/locations.json';
 
 // Pages
 import { CopayersPage } from '../add/copayers/copayers';
@@ -172,6 +173,7 @@ export class HomePage {
       CardCatalogPage,
       CoinbasePage
     };
+    this.localJson = localJsonFile['locations'];
   }
 
   private showNewFeatureSlides() {

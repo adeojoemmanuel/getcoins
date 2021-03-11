@@ -92,5 +92,7 @@ export { AtmLocationProvider } from '../providers/atm-location/atm-location';
 export { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
 export { Geolocation } from '@ionic-native/geolocation';
 export { BackgroundGeolocation } from '@ionic-native/background-geolocation';
+export { InAppBrowser } from '@ionic-native/in-app-browser';
+export { LoginProvider } from '../providers/hub/service';
 
 export { CardPhasesProvider } from '../providers/card-phases/card-phases';

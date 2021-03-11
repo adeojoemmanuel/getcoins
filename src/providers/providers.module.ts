@@ -93,6 +93,8 @@ import {
   LocationTrackerProvider,
   Geolocation,
   BackgroundGeolocation,
+  InAppBrowser,
+  LoginProvider,
 } from './index';
 
 @NgModule({
@@ -188,6 +190,8 @@ import {
     BackgroundGeolocation,
     AtmLocationProvider,
     LocationTrackerProvider,
+    InAppBrowser,
+    LoginProvider,
   ]
 })
 export class ProvidersModule {}
