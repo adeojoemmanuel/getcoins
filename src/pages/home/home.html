@@ -1,9 +1,7 @@
 <ion-header class="bp-header">
   <ion-navbar>
     <ion-title>
-      <div [reveal-at-scroll-pos]="expandableHeader.headerHeight" [scrollArea]="scrollArea">
-        {{ 'Home' | translate }}
-      </div>
+       <img class="home-logo" src="assets/img/app/logo-negative.svg" />
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,11 +10,11 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   <expandable-header [scrollArea]="scrollArea" [fadeFactor]="5" [disableFade]="true" #expandableHeader>
-    <ion-toolbar class="wide-header__title" (click)="toggleTestnet()" tappable>
+   <!--  <ion-toolbar class="wide-header__title" (click)="toggleTestnet()" tappable>
       <expandable-header-primary>
         {{ 'Home' | translate }}
       </expandable-header-primary>
-    </ion-toolbar>
+    </ion-toolbar> -->
   </expandable-header>
 
   <div class="message-background" *ngIf="accessDenied">
