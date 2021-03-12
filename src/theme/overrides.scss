@@ -1,5 +1,5 @@
 /*
- * BitPay Distribution SCSS overrides
+ * GetCoins Distribution SCSS overrides
  */
 
 // Named Color Variables
@@ -10,6 +10,8 @@
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+// ** MAKE SURE YOU ARE IN app-template/getcoins/sass dir NOW!
+// **This file will be auto-copied/duplicated into src/theme folder upon compilation
 $color-primary: #495057; //**GC edit (BlueTheme: 8fbac0), f79420
 $color-secondary: #f79420; //**GC edi (BlueTheme: 10263e), 495057
 $color-secondary-dark: #dee2e6; //**GC edit (BlueTheme: 3b536b from portal lightest blue)
@@ -39,6 +41,10 @@ $black: #000;
 $toolbar-md-height: 46px; // **GC v2 Edit
 $toolbar-ios-height: 46px; // **GC v2 Edit
 
+// ** GCEdit---
+// ** Actual Individual OVERRIDE will happen in src/app/app.scss
+// ** because this part is only imported at the beginning and not the end
+// ** ant therefore, you need to run apply:getcoins whenver you made any changes on this file
 
 $onboarding-gradient-top-color: #2a3f90;
 $slider-bg-color: linear-gradient(

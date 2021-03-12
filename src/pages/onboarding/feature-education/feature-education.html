@@ -1,38 +1,10 @@
-<ion-header no-border>
-  <ion-navbar hideBackButton transparent></ion-navbar>
-</ion-header>
-
 <ion-content no-bounce>
-  <ion-slides (ionSlideDidChange)="slideChanged()" #featureEducationSlides [pager]="!featureEducationSlides.isEnd()" class="onboarding-slides">
-    <ion-slide *ngIf="appName !== 'Copay'">
-      <ion-content>
-        <div class="slide-info">
-          <div class="img-container">
-           <img src='assets/img/app/logo-negative.svg' />
-          </div>
-          <div class="info">
-            <div class="text" translate>
-              <div class="note" translate>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ion-content>
-    </ion-slide>
-  </ion-slides>
+  <div class="logo-tagline">
+    <img src='assets/img/app/logo-negative.svg' />
+  </div>
+  <div class="bottom-absolute">
+    <button ion-button class="button-standard" (click)="goToNextPage('ImportWalletPage')">
+      {{'Get started' | translate}}
+    </button>
+  </div>
 </ion-content>
-<ion-footer no-border *ngIf="!isCordova || featureEducationSlides.isEnd()">
-  <ion-toolbar *ngIf="!featureEducationSlides.isEnd() && !isCordova">
-    <button ion-button class="button-standard" (click)="featureEducationSlides.slideNext()">
-      {{'Continue' | translate}}
-    </button>
-  </ion-toolbar>
-  <ion-toolbar *ngIf="featureEducationSlides.isEnd()">
-    <button ion-button class="button-standard no-margin-bottom" (click)="goToNextPage('SelectCurrencyPage')">
-      {{'Start' | translate}}
-    </button>
-    <button ion-button clear color="primary" class="button-standard" (click)="goToNextPage('ImportWalletPage')">
-      {{'Import from backup' | translate}}
-    </button>
-  </ion-toolbar>
-</ion-footer>
