@@ -35,12 +35,12 @@ export class ThemeProvider {
         walletDetailsBackgroundEnd: '#ffffff'
       },
       dark: {
-        name: this.translate.instant('Dark Mode'),
-        bodyColor: '#121212',
-        backgroundColor: '#121212',
-        fixedScrollBgColor: '#121212',
-        walletDetailsBackgroundStart: '#121212',
-        walletDetailsBackgroundEnd: '#101010'
+        name: this.translate.instant('Light Mode'),
+        bodyColor: 'initial',
+        backgroundColor: '#ffffff',
+        fixedScrollBgColor: '#f8f8f9',
+        walletDetailsBackgroundStart: '#ffffff',
+        walletDetailsBackgroundEnd: '#ffffff'
       }
     };
   }
@@ -123,10 +123,10 @@ export class ThemeProvider {
     ].bodyColor;
     document
       .getElementsByTagName('ion-app')[0]
-      .classList.remove('dark', 'light');
+      .classList.remove('light', 'light');
     document
       .getElementsByTagName('ion-app')[0]
-      .classList.add(isDarkMode ? 'dark' : 'light');
+      .classList.add(isDarkMode ? 'light' : 'light');
     this.logger.debug('Apply Theme: ' + this.currentAppTheme);
   }
 
@@ -165,7 +165,7 @@ export class ThemeProvider {
   }
 
   public isDarkModeEnabled(): boolean {
-    return Boolean(this.currentAppTheme === 'dark');
+    return Boolean(this.currentAppTheme === 'light');
   }
 
   public getCurrentAppTheme() {

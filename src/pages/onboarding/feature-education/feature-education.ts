@@ -11,6 +11,7 @@ import { PlatformProvider } from '../../../providers/platform/platform';
 import { ImportWalletPage } from '../../../pages/add/import-wallet/import-wallet';
 import { SelectCurrencyPage } from '../../../pages/add/select-currency/select-currency';
 import { LockMethodPage } from '../../../pages/onboarding/lock-method/lock-method';
+import { DisclaimerPage } from '../../../pages/onboarding/disclaimer/disclaimer';
 
 @Component({
   selector: 'page-feature-education',
@@ -59,7 +60,8 @@ export class FeatureEducationPage {
   public goToNextPage(nextViewName: string): void {
     const config = this.configProvider.get();
     if ((config.lock && config.lock.method) || !this.isCordova)
-      this.navCtrl.push(this.pageMap[nextViewName], this.params);
+      // this.navCtrl.push(this.pageMap[nextViewName], this.params);
+      this.navCtrl.push(DisclaimerPage, this.params);
     else this.showInfoSheet(nextViewName);
   }
 

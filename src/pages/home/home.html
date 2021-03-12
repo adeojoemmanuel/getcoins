@@ -135,7 +135,7 @@
     <div class="line-divider" *ngIf="showExchangeCryptoOption"></div>
   </ion-list> -->
 
-  <ion-slides *ngIf="showAdvertisements && advertisements && advertisements[0] && !testingAdsEnabled" pager="true" (ionSlideDidChange)="slideChanged()">
+ <!--  <ion-slides *ngIf="showAdvertisements && advertisements && advertisements[0] && !testingAdsEnabled" pager="true" (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let advertisement of advertisements">
       <div class="message-background no-margin">
         <div class="message-header" *ngIf="advertisement.dismissible">
@@ -168,9 +168,9 @@
         </div>
       </div>
     </ion-slide>
-  </ion-slides>
+  </ion-slides> -->
 
-  <ion-slides *ngIf="showAdvertisements && testingAds && testingAds[0] && testingAdsEnabled" pager="true" (ionSlideDidChange)="slideChanged()">
+  <!-- <ion-slides *ngIf="showAdvertisements && testingAds && testingAds[0] && testingAdsEnabled" pager="true" (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let advertisement of testingAds">
       <div class="message-background no-margin">
         <div class="message-header" *ngIf="advertisement.dismissible">
@@ -203,7 +203,7 @@
         </div>
       </div>
     </ion-slide>
-  </ion-slides>
+  </ion-slides> -->
 <!-- <div class="card locations">
   <div class="section-header">
     <div translate>Exchange Rates</div>
@@ -214,7 +214,8 @@
 
 
 <!-- start wallet import -->
-<div class="card locations">
+<div>
+  <create-new-wallet *ngIf="!walletsGroups || !walletsGroups[0]"></create-new-wallet>
   <div *ngFor="let walletGroup of walletsGroups; let i = index" class="wallets-container">
     <div class="section-header" *ngIf="walletGroup[0].canSign && walletsGroups.length > 1">
       <ion-icon class="item-img" item-start>
