@@ -9,7 +9,7 @@ page-atm-locations {
   }
   .store_map {
     padding: 0;
-    border: 5px solid $white;
+    border: 5px solid #ffffff;
     height: 220px;
     &_div {
       height: 100%;
@@ -34,15 +34,15 @@ page-atm-locations {
   }
   .atm-location_button_dir {
     width: 99%;
-    background: $color-secondary;
-    color: $white;
+    background: #FFA500;
+    color: #ffffff;
     font-weight: 600;
     padding: 0;
   }
   .atm-location_button_call {
     width: 99%;
-    background: $gray-300;
-    color: $color-secondary;
+    background: #808080;
+    color: #FFA500;
     font-weight: 600;
     padding: 0;
   }
@@ -94,7 +94,7 @@ page-atm-locations {
       h2 {
         margin: 5px 0;
         font-weight: 600;
-        text-shadow: 0px 0px 1px $color-secondary;
+        text-shadow: 0px 0px 1px #FFA500;
         // color: $color-primary;
       }
       &:first-child {

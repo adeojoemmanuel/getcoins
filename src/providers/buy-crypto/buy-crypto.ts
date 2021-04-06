@@ -41,8 +41,8 @@ export class BuyCryptoProvider {
         method: 'applePay',
         imgSrc: 'assets/img/buy-crypto/apple-pay-logo.svg',
         supportedExchanges: {
-          simplex: false,
-          wyre: true
+          simplex: true,
+          wyre: false
         },
         enabled: this.platformProvider.isIOS
       },
@@ -72,7 +72,7 @@ export class BuyCryptoProvider {
         imgSrc: 'assets/img/buy-crypto/icon-debitcard.svg',
         supportedExchanges: {
           simplex: true,
-          wyre: true
+          wyre: false
         },
         enabled: true
       }
