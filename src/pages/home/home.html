@@ -112,20 +112,20 @@
     </div>
   </div> -->
 
- <!--  <ion-list margin-bottom class="bp-list">
-    <button ion-item *ngIf="showShoppingOption" (click)="goToShop()">
+  <!-- <ion-list margin-bottom class="bp-list">
+<button ion-item *ngIf="showShoppingOption" (click)="goToShop()">
       <ion-label>
         <div class="services-list-label" translate>Shop</div>
       </ion-label>
     </button>
-    <div *ngIf="showShoppingOption" class="line-divider"></div>
+    <div *ngIf="showShoppingOption" class="line-divider"></div> 
     <button ion-item *ngIf="showBuyCryptoOption" (click)="goToAmountPage()">
       <ion-label>
         <div class="services-list-label" translate>Buy Crypto</div>
       </ion-label>
     </button>
     <div class="line-divider" *ngIf="showBuyCryptoOption"></div>
-    <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
+ <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
       <ion-label>
         <div class="services-list-label" translate>Exchange Crypto</div>
       </ion-label>
@@ -210,8 +210,29 @@
   <exchange-rates #exchangeRates></exchange-rates>
 </div> -->
 
+<ion-list margin-bottom class="bp-list">
+  <!-- <button ion-item *ngIf="showShoppingOption" (click)="goToShop()">
+    <ion-label>
+      <div class="services-list-label" translate>Shop</div>
+    </ion-label>
+  </button>
+  <div *ngIf="showShoppingOption" class="line-divider"></div> -->
+  <div class="line-divider" *ngIf="showBuyCryptoOption"></div>
 
+  <button ion-item *ngIf="showBuyCryptoOption" (click)="goToAmountPage()">
+    <ion-label>
+      <div class="services-list-label" translate>Buy Crypto</div>
+    </ion-label>
+  </button>
+  <!-- <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
+    <ion-label>
+      <div class="services-list-label" translate>Exchange Crypto</div>
+    </ion-label>
+  </button>
+  <div class="line-divider" *ngIf="showExchangeCryptoOption"></div> -->
+</ion-list>
 <!-- start wallet import -->
+<a href="#atm-locations"><img src="assets/img/atm_location.jpeg"/></a>
 <div>
   <create-new-wallet *ngIf="!walletsGroups || !walletsGroups[0]"></create-new-wallet>
   <div *ngFor="let walletGroup of walletsGroups; let i = index" class="wallets-container">
@@ -255,8 +276,10 @@
     </label-tip>
   </div>
 </div> 
+
+
 <!-- end wallet import -->
-  <div class="card locations">
+  <div id="atm-locations" class="card locations">
     <ion-item-divider>
       <div class="title locations-title" item-start>
         <img
