@@ -10,7 +10,7 @@ page-new-feature {
       opacity: 0.2;
     }
     .swiper-pagination-bullet-active {
-      background: #4f6ef7;
+      background: orange;
       opacity: 1;
     }
     ion-slide {
@@ -84,7 +84,7 @@ page-new-feature {
     bottom: calc(1.5rem + env(safe-area-inset-bottom));
     bottom: -webkit-calc(2rem + env(safe-area-inset-bottom));
     right: 0;
-    color: #4f6ef7;
+    color: orange;
     cursor: pointer;
     text-transform: uppercase;
   }
