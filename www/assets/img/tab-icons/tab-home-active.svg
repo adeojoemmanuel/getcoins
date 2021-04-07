@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>Icons/home</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-Copy-68" transform="translate(-42.000000, -28.000000)" fill="#4F6EF7">
-            <g id="Tabs/Wallets">
-                <g id="Home" transform="translate(13.000000, 1.000000)">
-                    <g id="Icons/home" transform="translate(29.000000, 27.000000)">
-                        <path d="M23.6211583,9.22584821 L12.6211583,0.225848206 C12.2528786,-0.0752827354 11.723438,-0.0752827354 11.3551583,0.225848206 L0.355158287,9.22584821 C-0.0623817739,9.57814356 -0.119919278,10.2003262 0.225933916,10.6232178 C0.571787109,11.0461093 1.19301457,11.113178 1.62115829,10.7738482 L2.98815829,9.65584821 L2.98815829,20.9998482 C2.98815829,21.552133 3.43587354,21.9998482 3.98815829,21.9998482 L9.98815829,21.9998482 L9.98815829,15.9998482 L13.9881583,15.9998482 L13.9881583,21.9998482 L19.9881583,21.9998482 C20.540443,21.9998482 20.9881583,21.552133 20.9881583,20.9998482 L20.9881583,9.65584821 L22.3551583,10.7738482 C22.6310073,11.0065931 23.0108684,11.072636 23.349086,10.946653 C23.6873036,10.8206701 23.9313915,10.5222119 23.9877554,10.1657207 C24.0441194,9.80922958 23.9040126,9.45002732 23.6211583,9.22584821 L23.6211583,9.22584821 Z" id="Path"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 24" style="enable-background:new 0 0 20 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F79420;}
+	.st1{fill:#495057;}
+</style>
+<g>
+	<polygon class="st0" points="10,0.9 0.7,9.4 0.7,23.3 6.9,23.3 6.9,15.8 13.1,15.8 13.1,23.3 19.3,23.3 19.3,9.4 	"/>
+	<path class="st1" d="M20,24h-7.5v-7.5h-5V24H0V9.1L10,0l10,9.1V24z M13.8,22.6h4.8V9.7L10,1.9L1.4,9.7v12.9h4.8v-7.5h7.6V22.6z"/>
+</g>
 </svg>

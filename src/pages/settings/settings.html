@@ -21,12 +21,12 @@
     <ion-list class="bp-list">
       <ion-item-divider> {{ 'General' | translate }} </ion-item-divider>
 
-      <button ion-item (click)="openWhatsNew()" *ngIf="featureList && featureList.features.length > 0">
+      <button ion-item>
         <ion-icon class="item-img icon-settings" item-start>
           <img src="assets/img/settings-icons/icon-info.svg" />
         </ion-icon>
         <ion-label>
-          <span class="main-label" translate>What's new</span>
+          <span class="main-label" translate>Version</span>
         </ion-label>
         <ion-note item-end>
           {{appVersion}}
@@ -182,7 +182,7 @@
         {{ 'Create or Import a Key' | translate }}
       </button>
 
-      <ion-item-divider *ngIf="cardServices && cardServices[0]">
+      <!-- <ion-item-divider *ngIf="cardServices && cardServices[0]">
         {{ 'Cards' | translate }}
       </ion-item-divider>
 
@@ -200,8 +200,8 @@
             </button>
           </ng-container>
         </ion-list>
-      </div>
-
+      </div> -->
+<!-- 
       <button ion-item *ngFor="let card of (cardServices | orderBy: ['title'])" (click)="openSettingIntegration(card.name)">
         <ion-icon class="item-img" item-start>
           <img src="{{card.icon}}" />
@@ -229,7 +229,7 @@
             <span translate>Linked</span>
           </ion-note>
         </button>
-      </ng-container>
+      </ng-container> -->
 
 
       <ion-item-divider *ngIf="integrationServices && integrationServices[0]">
@@ -250,7 +250,7 @@
         </ion-note>
       </button>
 
-      <ion-item-divider *ngIf="externalServices && externalServices[0]">
+      <!-- <ion-item-divider *ngIf="externalServices && externalServices[0]">
         {{ 'External Services' | translate }}
       </ion-item-divider>
 
@@ -259,7 +259,7 @@
           <img src="{{externalService.icon}}" />
         </ion-icon>
         <span class="main-label">{{ externalService.title }}</span>
-      </button>
+      </button> -->
 
 
       <ion-item-divider tappable (click)="mdesCertOnlyFlag()">{{ 'More' | translate }}</ion-item-divider>
