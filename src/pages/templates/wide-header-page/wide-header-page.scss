@@ -10,8 +10,10 @@ card-catalog-page {
   }
 
   .wide-header {
+    padding: 30px;
     .toolbar-background {
-      background: white;
+      background: #797675;
+      color: #ffffff;
     }
 
     ion-title .toolbar-title {
@@ -19,9 +21,11 @@ card-catalog-page {
     }
 
     &__title {
-      color: black;
+      color: #ffffff;
       font-size: 25px;
       font-weight: 700;
+      // padding: 30px;
+      text-align: center;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 20px;

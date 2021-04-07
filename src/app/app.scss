@@ -159,13 +159,13 @@ ion-header.bp-header .toolbar {
 }
 
 .wide-header__title {
-  color: $text-color;
+  color: #ffffff;
   font-size: 25px;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  background: $background-color;
+  background: #797675;
 }
 
 .close-container {
@@ -494,6 +494,8 @@ a.royal {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  opacity: 100;
+  color: #ffffff;
 }
 
 .pointer {
@@ -572,6 +574,7 @@ ion-app,
 
 .button-default {
   color: white;
+  background: orange;
 }
 
 .button-secondary {
@@ -746,7 +749,7 @@ page-bitpay-card {
   @include toolbar-button-color(white);
 
   ion-title .toolbar-title {
-    color: color($colors, light);
+    color: white;
     font-weight: 75;
   }
 

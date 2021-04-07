@@ -1,11 +1,11 @@
 <ion-header class="bp-header">
-  <ion-navbar>
+  <!-- <ion-navbar>
     <ion-title>
-      <div [reveal-at-scroll-pos]="expandableHeader.headerHeight" [scrollArea]="scrollArea">
+     <div [reveal-at-scroll-pos]="expandableHeader.headerHeight" [scrollArea]="scrollArea">
         {{ 'Home' | translate }}
       </div>
     </ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
 </ion-header>
 <ion-content #scrollArea>
   <ion-refresher (ionRefresh)="doRefresh($event)" pullMin="90" pullMax="160" enabled="true">
@@ -14,7 +14,7 @@
   <expandable-header [scrollArea]="scrollArea" [fadeFactor]="5" [disableFade]="true" #expandableHeader>
     <ion-toolbar class="wide-header__title" (click)="toggleTestnet()" tappable>
       <expandable-header-primary>
-        {{ 'Home' | translate }}
+        {{ 'GetCoins' | translate }}
       </expandable-header-primary>
     </ion-toolbar>
   </expandable-header>
@@ -212,6 +212,13 @@
   <exchange-rates #exchangeRates></exchange-rates>
 </div> -->
 
+
+<!-- start wallet import -->
+  <br>
+  <div class="card"><a href="#atm-locations"><img src="assets/img/atm_location.jpeg"/></a>
+  </div>
+  <br>
+
 <ion-list margin-bottom class="bp-list">
   <!-- <button ion-item *ngIf="showShoppingOption" (click)="goToShop()">
     <ion-label>
@@ -219,13 +226,14 @@
     </ion-label>
   </button>
   <div *ngIf="showShoppingOption" class="line-divider"></div> -->
-  <div class="line-divider" *ngIf="showBuyCryptoOption"></div>
 
   <button ion-item *ngIf="showBuyCryptoOption" (click)="goToAmountPage()">
     <ion-label>
       <div class="services-list-label" translate>Buy Crypto</div>
     </ion-label>
   </button>
+  <div class="line-divider" *ngIf="showBuyCryptoOption"></div>
+
   <!-- <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
     <ion-label>
       <div class="services-list-label" translate>Exchange Crypto</div>
@@ -233,8 +241,6 @@
   </button>
   <div class="line-divider" *ngIf="showExchangeCryptoOption"></div> -->
 </ion-list>
-<!-- start wallet import -->
-<a href="#atm-locations"><img src="assets/img/atm_location.jpeg"/></a>
 <div>
   <create-new-wallet *ngIf="!walletsGroups || !walletsGroups[0]"></create-new-wallet>
   <div *ngFor="let walletGroup of walletsGroups; let i = index" class="wallets-container">

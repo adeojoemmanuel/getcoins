@@ -425,9 +425,15 @@ ion-footer {
 
 .toolbar {
   // Titles centered on all headers for material design
+  border-bottom: 2px solid orange;
+  padding: 40px;
+  text-align: center;
+  color: white;
+
   &.toolbar-md {
     //material design only
     position: relative;
+    
 
     .back-button {
       z-index: 999;
