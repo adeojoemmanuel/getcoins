@@ -233,7 +233,7 @@
           <div class="services-list-label" translate>Buy Crypto</div>
         </ion-label>
       </button>
-      <div class="line-divider" *ngIf="showBuyCryptoOption"></div>
+      <!-- <div class="line-divider" *ngIf="showBuyCryptoOption"></div> -->
 
       <!-- <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
         <ion-label>
@@ -242,7 +242,7 @@
       </button>
       <div class="line-divider" *ngIf="showExchangeCryptoOption"></div> -->
     </ion-list>
-  </div>s
+  </div>
 <div>
   <create-new-wallet *ngIf="!walletsGroups || !walletsGroups[0]"></create-new-wallet>
   <div *ngFor="let walletGroup of walletsGroups; let i = index" class="wallets-container">
