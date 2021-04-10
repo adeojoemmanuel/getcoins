@@ -1,22 +1,11 @@
 <ion-header class="bp-header">
-  <!-- <ion-navbar>
-    <ion-title>
-     <div [reveal-at-scroll-pos]="expandableHeader.headerHeight" [scrollArea]="scrollArea">
-        {{ 'Home' | translate }}
-      </div>
-    </ion-title>
-  </ion-navbar> -->
+
 </ion-header>
 <ion-content #scrollArea>
   <ion-refresher (ionRefresh)="doRefresh($event)" pullMin="90" pullMax="160" enabled="true">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   <expandable-header [scrollArea]="scrollArea" [fadeFactor]="5" [disableFade]="true" #expandableHeader>
-    <ion-toolbar class="wide-header__title" (click)="toggleTestnet()" tappable>
-      <expandable-header-primary>
-        {{ 'GetCoins' | translate }}
-      </expandable-header-primary>
-    </ion-toolbar>
   </expandable-header>
 
   <div class="message-background" *ngIf="accessDenied">
