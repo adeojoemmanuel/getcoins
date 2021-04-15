@@ -662,13 +662,13 @@ export class WalletDetailsPage {
   }
 
   public goToReceivePage() {
-    if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
-      const needsBackup = this.actionSheetProvider.createNeedsBackup();
-      needsBackup.present();
-      needsBackup.onDidDismiss(data => {
-        if (data === 'goToBackup') this.goToBackup();
-      });
-    } else {
+    // if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
+    //   const needsBackup = this.actionSheetProvider.createNeedsBackup();
+    //   needsBackup.present();
+    //   needsBackup.onDidDismiss(data => {
+    //     if (data === 'goToBackup') this.goToBackup();
+    //   });
+    // } else {
       const params = {
         wallet: this.wallet
       };
@@ -677,7 +677,7 @@ export class WalletDetailsPage {
       receive.onDidDismiss(data => {
         if (data) this.showErrorInfoSheet(data);
       });
-    }
+    // }
   }
 
   public goToSendPage() {
@@ -687,13 +687,13 @@ export class WalletDetailsPage {
   }
 
   public goToExchangeCryptoPage() {
-    if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
-      const needsBackup = this.actionSheetProvider.createNeedsBackup();
-      needsBackup.present();
-      needsBackup.onDidDismiss(data => {
-        if (data === 'goToBackup') this.goToBackup();
-      });
-    } else {
+    // if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
+    //   const needsBackup = this.actionSheetProvider.createNeedsBackup();
+    //   needsBackup.present();
+    //   needsBackup.onDidDismiss(data => {
+    //     if (data === 'goToBackup') this.goToBackup();
+    //   });
+    // } else {
       this.analyticsProvider.logEvent('exchange_crypto_button_clicked', {
         from: 'walletDetails',
         coin: this.wallet.coin
@@ -701,17 +701,17 @@ export class WalletDetailsPage {
       this.navCtrl.push(ExchangeCryptoPage, {
         walletId: this.wallet.id
       });
-    }
+    // }
   }
 
   public goToBuyCryptoPage() {
-    if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
-      const needsBackup = this.actionSheetProvider.createNeedsBackup();
-      needsBackup.present();
-      needsBackup.onDidDismiss(data => {
-        if (data === 'goToBackup') this.goToBackup();
-      });
-    } else {
+    // if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
+    //   const needsBackup = this.actionSheetProvider.createNeedsBackup();
+    //   needsBackup.present();
+    //   needsBackup.onDidDismiss(data => {
+    //     if (data === 'goToBackup') this.goToBackup();
+    //   });
+    // } else {
       this.analyticsProvider.logEvent('buy_crypto_button_clicked', {
         from: 'walletDetails',
         coin: this.wallet.coin
@@ -723,7 +723,7 @@ export class WalletDetailsPage {
         currency: this.configProvider.get().wallet.settings.alternativeIsoCode,
         walletId: this.wallet.id
       });
-    }
+    // }
   }
 
   public showMoreOptions(): void {
