@@ -32,7 +32,7 @@ import { WalletDetailsPage } from '../../wallet-details/wallet-details';
 export class CryptoOrderSummaryPage {
   private wallets: any[];
   public wallet: any;
-  public walletId: any;
+  public walletId: any; 
   public coin: string;
   public paymentMethod: any;
   public country: string;
@@ -95,6 +95,7 @@ export class CryptoOrderSummaryPage {
 
         if (this.navParams.data.walletId) {
           this.setWallet(this.navParams.data.walletId);
+          console.log(this.navParams.data.walletId);
         } else {
           this.selectFirstAvailableWallet();
         }

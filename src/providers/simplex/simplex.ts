@@ -116,7 +116,7 @@ export class SimplexProvider {
 
   public getCheckoutUrl(): string {
     return env.name == 'development'
-      ? 'https://sandbox.test-simplexcc.com'
+      ? 'https://card.getcoins.com/'
       : 'https://checkout.simplexcc.com';
   }
 
@@ -302,7 +302,7 @@ export class SimplexProvider {
     const api_host = this.getCheckoutUrl();
 
     const url =
-      this.passthrough_uri + '?api_host=' + api_host + '/payments/new/&' + str;
+      this.passthrough_uri + '?api_host=' + api_host ;
 
     this.logger.debug('Simplex: ready for payment form submission');
 
