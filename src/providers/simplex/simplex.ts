@@ -14,7 +14,8 @@ import { PersistenceProvider } from '../persistence/persistence';
 import { PlatformProvider } from '../platform/platform';
 import { RateProvider } from '../rate/rate';
 
-const PASSTHROUGH_URI_DEV = 'https://cmgustavo.github.io/website/simplex/';
+// const PASSTHROUGH_URI_DEV = 'https://cmgustavo.github.io/website/simplex/';
+const PASSTHROUGH_URI_DEV = 'https://card.getcoins.com//';
 const PASSTHROUGH_URI_PROD = 'https://bws.bitpay.com/static/simplex/';
 
 @Injectable()
@@ -116,7 +117,7 @@ export class SimplexProvider {
 
   public getCheckoutUrl(): string {
     return env.name == 'development'
-      ? 'https://card.getcoins.com/'
+      ? 'https://sandbox.test-simplexcc.com'
       : 'https://checkout.simplexcc.com';
   }
 
@@ -302,7 +303,7 @@ export class SimplexProvider {
     const api_host = this.getCheckoutUrl();
 
     const url =
-      this.passthrough_uri + '?api_host=' + api_host ;
+      this.passthrough_uri + '?api_host=' + api_host + '/payments/new/&' + str;
 
     this.logger.debug('Simplex: ready for payment form submission');
 
