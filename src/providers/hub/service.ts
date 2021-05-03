@@ -71,7 +71,7 @@ export class LoginProvider {
       })
     })
   }
-
+ 
   getlocationslocal() {
     if (this.platform.is('cordova')) {
       // make your native API calls
@@ -141,20 +141,20 @@ export class LoginProvider {
     const headers = new HttpHeaders({
       'Content-Type':  'application/json'
     })
+    console
     return this.http.get(this.apiurl + '/check?phone='+ data, {headers: headers, observe: "response", withCredentials: true, responseType: "json"}); 
   } 
 
-  reset(data){
+  reset(data) {
     const headers = new HttpHeaders({
       'Content-Type':  'application/json'
     })
     return this.http.post(this.apiurl + '/reset-password', data, {headers: headers, observe: "response", withCredentials: true, responseType: "json"}); 
-  } 
+  }
 
   getLocation(){
     return this.http.get(this.websitejson); 
   } 
-
 
   getTransactions(token, cookie, data){
     const headers = new HttpHeaders({

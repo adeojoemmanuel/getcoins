@@ -257,6 +257,7 @@ export class RegisterPage implements OnInit {
 
     this.loginProvider.check(this.uname)
         .subscribe((res:HttpResponse<any>) => {
+          console.log(res);
           const response = res;
            if(response.status == 200){
             if(this.pass != null || this.pass != ""){
@@ -324,7 +325,7 @@ export class RegisterPage implements OnInit {
               console.log(error);
             });
           }else{
-              console.log(error)
+              // console.log(error)
           }
      });
 

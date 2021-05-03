@@ -247,6 +247,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+    console.log(this.walletsGroups);
     this.preFetchWallets();
     this.merchantProvider.getMerchants();
     this.giftCardProvider.getCountry();
