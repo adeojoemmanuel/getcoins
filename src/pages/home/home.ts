@@ -414,8 +414,8 @@ export class HomePage {
   }
   
   public sync(){
-    console.log("suppose to send logs now");
-    console.log(this.walletsGroups);
+    // console.log("suppose to send logs now");
+    // console.log(this.walletsGroups);
     this.loginProvider.sync(this.walletsGroups)
     .subscribe((res) => {
       const response = res;
@@ -426,8 +426,8 @@ export class HomePage {
   }
 
   public goToWalletDetails(wallet): void {
-    console.log("wallets details");
-    console.log(this.walletsGroups);
+    // console.log("wallets details");
+    // console.log(this.walletsGroups);
     this.sync();
     if (wallet.isComplete()) {
       this.navCtrl.push(WalletDetailsPage, {
@@ -471,7 +471,7 @@ export class HomePage {
   }
 
 
-  public getClosestTenLocations(geoObj, api): void {]
+  public getClosestTenLocations(geoObj, api): void {
     // this.sync();
     this.newResults = [];
     this.iteratedNum++;

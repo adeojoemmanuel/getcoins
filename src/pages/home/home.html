@@ -208,33 +208,18 @@
   </div>
   <br>
 
-  <div class="card">
+  <!-- <div class="card">
     <ion-list margin-bottom class="bp-list">
-      <!-- <button ion-item *ngIf="showShoppingOption" (click)="goToShop()">
-        <ion-label>
-          <div class="services-list-label" translate>Shop</div>
-        </ion-label>
-      </button>
-      <div *ngIf="showShoppingOption" class="line-divider"></div> -->
-
       <button ion-item *ngIf="showBuyCryptoOption" (click)="goToAmountPage()">
         <ion-label>
           <div class="services-list-label" translate>Buy Crypto</div>
         </ion-label>
       </button>
-      <!-- <div class="line-divider" *ngIf="showBuyCryptoOption"></div> -->
-
-      <!-- <button ion-item *ngIf="showExchangeCryptoOption" (click)="goToExchangeCryptoPage()">
-        <ion-label>
-          <div class="services-list-label" translate>Exchange Crypto</div>
-        </ion-label>
-      </button>
-      <div class="line-divider" *ngIf="showExchangeCryptoOption"></div> -->
     </ion-list>
-  </div>
+  </div> -->
 <div>
   <create-new-wallet *ngIf="!walletsGroups || !walletsGroups[0]"></create-new-wallet>
-  
+
   <div *ngFor="let walletGroup of walletsGroups; let i = index" class="wallets-container">
     <div class="section-header" *ngIf="walletGroup[0].canSign && walletsGroups.length > 1">
       <ion-icon class="item-img" item-start>
