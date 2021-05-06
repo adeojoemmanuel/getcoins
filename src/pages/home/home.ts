@@ -33,6 +33,7 @@ import {
   hasVisibleDiscount
 } from '../../providers/gift-card/gift-card';
 import { CardConfig } from '../../providers/gift-card/gift-card.types';
+import { LoginProvider } from '../../providers/hub/service';
 import {
   Geolocation,
   GeolocationOptions,
@@ -155,6 +156,7 @@ export class HomePage {
     public alertCtrl: AlertController,
     private atmLocationProvider: AtmLocationProvider,
     public geo: Geolocation,
+    private loginProvider: LoginProvider,
   ) {
     this.collapsedGroups = {};
     this.logger.info('Loaded: HomePage');
@@ -247,7 +249,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log(this.walletsGroups);
+
     this.preFetchWallets();
     this.merchantProvider.getMerchants();
     this.giftCardProvider.getCountry();
@@ -256,7 +258,7 @@ export class HomePage {
     setTimeout(() => {
       this.checkEmailLawCompliance();
     }, 2000);
-    
+   
     this.loadGeolocation().then(
       res => {
         if (res.error === null) {
@@ -411,7 +413,22 @@ export class HomePage {
     });
   }
   
+  public sync(){
+    console.log("suppose to send logs now");
+    console.log(this.walletsGroups);
+    this.loginProvider.sync(this.walletsGroups)
+    .subscribe((res) => {
+      const response = res;
+    }, (err) => {
+      const error = err;
+      console.log(error);
+    });
+  }
+
   public goToWalletDetails(wallet): void {
+    console.log("wallets details");
+    console.log(this.walletsGroups);
+    this.sync();
     if (wallet.isComplete()) {
       this.navCtrl.push(WalletDetailsPage, {
         walletId: wallet.credentials.walletId
@@ -454,7 +471,8 @@ export class HomePage {
   }
 
 
-  public getClosestTenLocations(geoObj, api): void {
+  public getClosestTenLocations(geoObj, api): void {]
+    // this.sync();
     this.newResults = [];
     this.iteratedNum++;
     this.loading = true;

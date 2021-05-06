@@ -2,8 +2,8 @@
   "//-": "Changes to this file will be overwritten.",
   "//--": "Modify it's template in the app-template directory.",
 
-  "name": "Secure Bitcoin Wallet",
-  "short_name": "BitPay",
+  "name": "GetCoins Secure Bitcoin Wallet",
+  "short_name": "GetCoins",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [
@@ -13,6 +13,6 @@
       "type": "image/png"
     }
   ],
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "background_color": "#f79420",
+  "theme_color": "#f79420"
 }

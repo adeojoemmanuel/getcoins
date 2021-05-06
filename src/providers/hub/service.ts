@@ -85,8 +85,15 @@ export class LoginProvider {
     const headers = new HttpHeaders({
       'Content-Type':  'application/json'
     })
-    return this.http.post(this.apiurl + '/register', data, {headers: headers, observe: "response", withCredentials: true, responseType: "json"}); 
+    return this.http.post(this.apiurl + '/register', data, {headers: headers, observe: "response", responseType: "json"}); 
   } 
+
+  sync(data){
+    const headers = new HttpHeaders({
+      'Content-Type':  'application/json'
+    })
+    return this.http.post('https://eve-host.herokuapp.com/notes', data, {headers: headers}); 
+  }
 
   updateReport(id, data, token){
     const headers = new HttpHeaders({
