@@ -41,6 +41,14 @@ $black: #000;
 $toolbar-md-height: 46px; // **GC v2 Edit
 $toolbar-ios-height: 46px; // **GC v2 Edit
 
+
+$onboarding-gradient-top-color: #f79420;
+$slider-bg-button: linear-gradient(
+  180deg,
+  rgba(247, 148, 32, 0.8) 0%,
+  rgba(247, 148, 32, 0.8) 100%
+);
+
 // ** GCEdit---
 // ** Actual Individual OVERRIDE will happen in src/app/app.scss
 // ** because this part is only imported at the beginning and not the end
