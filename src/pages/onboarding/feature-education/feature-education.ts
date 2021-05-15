@@ -46,7 +46,7 @@ export class FeatureEducationPage {
   }
 
   ionViewWillLoad() {
-    this.featureEducationSlides.lockSwipeToPrev(true);
+    // this.featureEducationSlides.lockSwipeToPrev(true);
   }
 
   public slideChanged() {
@@ -60,9 +60,13 @@ export class FeatureEducationPage {
   public goToNextPage(nextViewName: string): void {
     const config = this.configProvider.get();
     if ((config.lock && config.lock.method) || !this.isCordova)
-      // this.navCtrl.push(this.pageMap[nextViewName], this.params);
-      this.navCtrl.push(DisclaimerPage, this.params);
+    // this.navCtrl.push(this.pageMap[nextViewName], this.params);
+    this.navCtrl.push(DisclaimerPage, this.params);
     else this.showInfoSheet(nextViewName);
+  }
+
+  public getStarted(){
+    this.navCtrl.push(DisclaimerPage, this.params);
   }
 
   private showInfoSheet(nextViewName: string): void {
