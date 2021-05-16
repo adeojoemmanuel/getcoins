@@ -1,28 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
+<<<<<<< HEAD
 <widget id="com.getcoins.gcwallet"
   version="2.0.0"
   android-versionCode="20000000"
   ios-CFBundleVersion="2.0.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
+=======
+<widget android-versionCode="20000000" id="com.getcoins.gcwallet2" ios-CFBundleVersion="2.0.0" version="2.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+>>>>>>> c1ac8dca18752a4471b1422305150a74fa40f863
     <name>GCWallet</name>
     <description>
       GetCoins' Bitcoin Wallet
     </description>
-    <author email="support@bitpay.com" href="https://getcoins.com">
-        BitPay Inc.
+    <author email="mimi@evergreenatm.io" href="https://getcoins.com">
+        Evergreen ATM, LLC.
     </author>
     <content src="index.html" />
-    <access origin="https://bws.bitpay.com" />
-    <access origin="https://bitpay.com" />
-    <access origin="https://test.bitpay.com" />
-    <access origin="https://staging.bitpay.com" />
-    <access origin="https://auth.shapeshift.io" />
-    <access origin="https://shapeshift.io" />
-    <access origin="https://api.coinbase.com" />
-    <access origin="https://coinbase.com" />
-    <access origin="https://www.coinbase.com" />
-    <access origin="https://api.testwyre.com" />
-    <access origin="https://api.sendwyre.com" />
+    <access origin="*" />
     <allow-navigation href="gap://ready" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
     <preference name="iosPersistentFileLocation" value="Library" />

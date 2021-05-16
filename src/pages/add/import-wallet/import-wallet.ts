@@ -116,8 +116,11 @@ export class ImportWalletPage {
 
   ionViewWillEnter() {
     const previousView = this.navCtrl.getPrevious();
+    // if (this.isOnboardingFlow && previousView.name === 'LockMethodPage') {
+    //   this.navCtrl.removeView(previousView);
+    // }
     if (this.isOnboardingFlow && previousView.name === 'LockMethodPage') {
-      this.navCtrl.removeView(previousView);
+      // this.navCtrl.removeView(previousView);
     }
   }
 

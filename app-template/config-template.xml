@@ -8,21 +8,12 @@
     <description>
       *PURPOSELINE*
     </description>
-    <author email="support@bitpay.com" href="*URL*">
-        BitPay Inc.
+    <author email="mimi@evergreenatm.io" href="*URL*">
+        Evergreen ATM, LLC.
     </author>
     <content src="index.html" />
-    <access origin="https://bws.bitpay.com" />
-    <access origin="https://bitpay.com" />
-    <access origin="https://test.bitpay.com" />
-    <access origin="https://staging.bitpay.com" />
-    <access origin="https://auth.shapeshift.io" />
-    <access origin="https://shapeshift.io" />
-    <access origin="https://api.coinbase.com" />
-    <access origin="https://coinbase.com" />
-    <access origin="https://www.coinbase.com" />
-    <access origin="https://api.testwyre.com" />
-    <access origin="https://api.sendwyre.com" />
+    <access origin="*" />
+    
     <allow-navigation href="gap://ready" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
     <preference name="iosPersistentFileLocation" value="Library" />
