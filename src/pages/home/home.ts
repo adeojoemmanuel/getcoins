@@ -1087,10 +1087,10 @@ export class HomePage {
         const now = moment().unix();
         const timeExceeded = now - feedbackInfo.time >= 24 * 7 * 60 * 60;
         this.showRateCard = timeExceeded && !feedbackInfo.sent;
-        this.showCard.setShowRateCard(this.showRateCard);
-        this.showCard.setShowSurveyCard(
-          timeExceeded && !feedbackInfo.surveyTaken
-        );
+        // this.showCard.setShowRateCard(this.showRateCard);
+        // this.showCard.setShowSurveyCard(
+        //   timeExceeded && !feedbackInfo.surveyTaken
+        // );
       }
     });
   }
@@ -1199,6 +1199,6 @@ export class HomePage {
   }
 }
 
-function getGiftCardAdvertisementName(discountedCard: CardConfig): string {
-  return `${discountedCard.discounts[0].code}-${discountedCard.name}-gift-card-discount`;
-}
+// function getGiftCardAdvertisementName(discountedCard: CardConfig): string {
+//   return `${discountedCard.discounts[0].code}-${discountedCard.name}-gift-card-discount`;
+// }

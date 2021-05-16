@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { IonicPage, NavController, NavParams,  MenuController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController} from 'ionic-angular';
 
 import { TransactionsPage } from '../transactions/transactions'
 import { ViewReport } from '../view-report/view-report'
@@ -15,7 +15,7 @@ import { IncreaseLimit } from '../increase-limit/increase-limit'
 export class UploadDocumentPage {
   public pages: Array<{title: string, component: any,icon:any}>;
   broweroption : InAppBrowserOptions = {
-      zoom : 'no',//Android only ,shows browser zoom controls 
+      zoom : 'no',
    }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menu: MenuController, private iab: InAppBrowser) {
@@ -43,7 +43,7 @@ export class UploadDocumentPage {
 
   openBrowser(){
     let target = "_system";
-    window.open("https://www.getcoins.com/vipapplication/",target, 'zoom=no');
+    window.open("https://www.getcoins.com/application/",target, 'zoom=no');
     // this.iab.create('https://www.getcoins.com/vipapplication/', target, this.broweroption);
   }
 
