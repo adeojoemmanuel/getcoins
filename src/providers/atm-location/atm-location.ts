@@ -31,9 +31,10 @@ export class AtmLocationProvider {
   ) {
     console.log('Hello AtmLocationProvider Provider');
     // this.apiurl_old = 'https://getcoins.com/api/locations/index.php';
-    this.apiurl = 'https://getcoins.com/api/v1/location/read.php';
-    this.locurl = 'assets/locations.json';
-    this.locurlForBrowser = '../../../../assets/locations.json';
+    // this.apiurl = 'https://getcoins.com/api/v1/location/read.php';
+    this.apiurl = 'https://getcoins.com/api/v1/getlocation/';
+    this.locurl = 'https://getcoins.com/api/v1/getlocation/';
+    this.locurlForBrowser = 'https://getcoins.com/api/v1/getlocation/';
   }
 
   // /**

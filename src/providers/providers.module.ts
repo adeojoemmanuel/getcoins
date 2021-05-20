@@ -95,6 +95,14 @@ import {
   BackgroundGeolocation,
   InAppBrowser,
   LoginProvider,
+  OpenNativeSettings,
+  Camera,
+  Base64,
+  FileChooser,
+  IOSFilePicker,
+  FilePath,
+  Transfer,
+  AndroidPermissions,
 } from './index';
 
 @NgModule({
@@ -192,6 +200,14 @@ import {
     LocationTrackerProvider,
     InAppBrowser,
     LoginProvider,
+    OpenNativeSettings,
+    Camera,
+    Base64,
+    FileChooser,
+    IOSFilePicker,
+    FilePath,
+    Transfer,
+    AndroidPermissions,
   ]
 })
 export class ProvidersModule {}

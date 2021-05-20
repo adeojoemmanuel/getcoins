@@ -1,5 +1,5 @@
 <action-sheet>
-  <div *ngIf="wallet && wallet.isComplete() && !wallet.needsBackup && (!newAddressError || address)">
+  <div>
     <ion-row class="addr-header" align-items-center>
       <ion-col text-left>
         <span class="addr-title" translate>
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="qr-container" *ngIf="wallet && wallet?.isComplete() && !wallet?.needsBackup" [ngClass]="{'blur': bchAddrFormat === 'legacy' && !disclaimerAccepted}">
+    <div class="qr-container"  [ngClass]="{'blur': bchAddrFormat === 'legacy' && !disclaimerAccepted}">
       <div class="prompt-user" *ngIf="newAddressError && !address">
         <div class="title-icon larger-icon">
           <img src="assets/img/ghost-straight-face.svg" />

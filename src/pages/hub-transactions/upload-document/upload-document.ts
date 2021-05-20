@@ -41,10 +41,18 @@ export class UploadDocumentPage {
     this.navCtrl.setRoot(IncreaseLimit);
   }
 
-  openBrowser(){
+  openBrowser2(){
     let target = "_system";
     window.open("https://www.getcoins.com/application/",target, 'zoom=no');
     // this.iab.create('https://www.getcoins.com/vipapplication/', target, this.broweroption);
+  }
+
+  openBrowser() {
+    const options: InAppBrowserOptions = {
+      zoom: 'no'
+    }
+    // Opening a URL and returning an InAppBrowserObject
+    this.iab.create("https://www.getcoins.com/application/", '_system', options);
   }
 
   toggleMenu() {

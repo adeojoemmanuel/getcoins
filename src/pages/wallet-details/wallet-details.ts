@@ -662,6 +662,7 @@ export class WalletDetailsPage {
   }
 
   public goToReceivePage() {
+    // console.log(this.wallet)
     // if (this.wallet && this.wallet.isComplete() && this.wallet.needsBackup) {
     //   const needsBackup = this.actionSheetProvider.createNeedsBackup();
     //   needsBackup.present();

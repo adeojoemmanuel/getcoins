@@ -5,6 +5,7 @@ import { Events, ModalController, NavController, Platform, Slides, AlertControll
 import * as _ from 'lodash';
 import * as moment from 'moment';
 import { FormatCurrencyPipe } from '../../pipes/format-currency';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 
 // Providers
 import {
@@ -157,6 +158,7 @@ export class HomePage {
     private atmLocationProvider: AtmLocationProvider,
     public geo: Geolocation,
     private loginProvider: LoginProvider,
+    private OpenNativeSettings: OpenNativeSettings,
   ) {
     this.collapsedGroups = {};
     this.logger.info('Loaded: HomePage');
@@ -394,6 +396,10 @@ export class HomePage {
         isTesting: false,
         dismissible: true
       });
+  }
+
+  public openPhoneSettings(command){
+    this.OpenNativeSettings.open(command);
   }
 
   private debounceSetWallets = _.debounce(

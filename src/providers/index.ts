@@ -16,6 +16,18 @@ export { StatusBar } from '@ionic-native/status-bar';
 export { Toast } from '@ionic-native/toast';
 export { Vibration } from '@ionic-native/vibration';
 export { UserAgent } from '@ionic-native/user-agent';
+export { OpenNativeSettings } from '@ionic-native/open-native-settings';
+
+
+export { Camera } from '@ionic-native/camera';
+
+export { Base64 } from '@ionic-native/base64';
+export { FileChooser } from "@ionic-native/file-chooser";
+export { IOSFilePicker } from "@ionic-native/file-picker";
+export { FilePath } from "@ionic-native/file-path";
+export { Transfer } from '@ionic-native/transfer';
+export { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
 
 /* Providers */
 export { ActionSheetProvider } from '../providers/action-sheet/action-sheet';
