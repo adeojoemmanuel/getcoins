@@ -94,8 +94,8 @@ Follow the [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/l
 When your development environment is ready, run the `start:android` package script.
 
 ```sh
-npm run apply:bitpay
-npm run prepare:bitpay
+npm run apply:getcoins
+npm run prepare:getcoins
 npm run start:android
 ```
 
