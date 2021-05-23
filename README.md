@@ -291,3 +291,9 @@ Please see [Support requests](CONTRIBUTING.md#support)
 ## License
 
 Bitpay Wallet is released under the MIT License. Please refer to the [LICENSE](https://github.com/bitpay/wallet/blob/master/LICENSE) file that accompanies this project for more information including complete terms and conditions.
+
+duplicate plugins to be removed
+
+CDVWKProcessPoolFact
+CDVWKWebViewEng
+CDVWKWebViewUIDele
