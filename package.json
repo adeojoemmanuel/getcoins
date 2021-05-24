@@ -213,7 +213,6 @@
     "@types/prismjs": "1.9.1",
     "adm-zip": "0.4.13",
     "codecov": "3.7.2",
-    "cordova-ios": "5.1.1",
     "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-filepath": "^1.5.8",
     "cordova-plugin-geolocation": "^4.0.2",
