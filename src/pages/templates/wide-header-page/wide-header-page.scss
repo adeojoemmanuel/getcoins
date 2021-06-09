@@ -65,7 +65,7 @@ purchased-cards-page {
   @include toolbar-button-color();
 
   ion-title .toolbar-title {
-    color: black;
+    color: white;
     font-weight: 400;
   }
 
@@ -93,5 +93,5 @@ purchased-cards-page {
 @include toolbar-button-color();
 
 ion-title .toolbar-title {
-  color: black;
+  color: white;
 }

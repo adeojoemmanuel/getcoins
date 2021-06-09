@@ -1,6 +1,11 @@
-<ion-header class="bp-header">
-
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h1 class="h1_small">Home</h1>
+    </ion-title>
+  </ion-navbar>
 </ion-header>
+
 <ion-content #scrollArea>
   <ion-refresher (ionRefresh)="doRefresh($event)" pullMin="90" pullMax="160" enabled="true">
     <ion-refresher-content></ion-refresher-content>
@@ -202,11 +207,9 @@
 </div> -->
 
 
-<!-- start wallet import -->
-  <br>
   <div><a href="#atm-locations"><img src="assets/img/atm_location.jpg"/></a>
   </div>
-  <br>
+
 
   <!-- <div class="card">
     <ion-list margin-bottom class="bp-list">
