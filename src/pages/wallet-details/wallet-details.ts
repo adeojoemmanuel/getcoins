@@ -850,4 +850,14 @@ export class WalletDetailsPage {
       cancelText
     );
   }
+  public scan() {
+    this.walletProvider.startScan(this.wallet);
+    this.navCtrl.popToRoot().then(() => {
+      setTimeout(() => {
+        this.navCtrl.push(WalletDetailsPage, {
+          walletId: this.wallet.credentials.walletId
+        });
+      }, 1000);
+    });
+  }
 }
